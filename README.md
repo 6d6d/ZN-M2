@@ -41,7 +41,9 @@ luci-app-openvpn-server
 luci-app-zerotier  
 
 luci-app-arpbind  #IP/MAC绑定
+
 luci-app-autoreboot  #支持计划重启
+
 luci-app-ddns   #动态域名 DNS（集成阿里DDNS客户端）
 luci-app-diskman   #磁盘管理工具
 luci-app-diskman ---> Include btrfs-progs   #新型的写时复制 (COW)
