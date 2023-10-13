@@ -44,7 +44,7 @@ luci-app-arpbind  #IP/MAC绑定
 luci-app-autoreboot  #支持计划重启
 luci-app-ddns   #动态域名 DNS（集成阿里DDNS客户端）
 luci-app-diskman   #磁盘管理工具
-    luci-app-diskman ---> Include btrfs-progs   #新型的写时复制 (COW)
+luci-app-diskman ---> Include btrfs-progs   #新型的写时复制 (COW)
     luci-app-diskman ---> Include lsblk   #lsblk命令 用于列出所有可用块设备的信息
     luci-app-diskman ---> Include mdadm   #mdadm命令 用于创建、管理、监控RAID设备的工具
     luci-app-diskman ---> Include kmod-md-raid456   #RAID 4,5,6 驱动程序模块（丢弃）
