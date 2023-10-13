@@ -18,7 +18,7 @@
 <br>
 
 ## ipq6000固件特性：  
-0.默认后台地址192.168.100.1；默认后台密码password。  
+0.默认后台地址192.168.1.1；默认后台密码password。  
 1.添加cpu温度、频率以及npu占用率显示。  
 2.修复nat环回功能失效bug。  
 3.cpu超频至1.6ghz，跑分2w+。  
@@ -39,6 +39,44 @@ luci-app-cpufreq
 luci-app-ipsec-vpnd  
 luci-app-openvpn-server  
 luci-app-zerotier  
+
+LuCI ---> Applications ---> luci-app-arpbind  #IP/MAC绑定
+LuCI ---> Applications ---> luci-app-autoreboot  #支持计划重启
+LuCI ---> Applications ---> luci-app-ddns   #动态域名 DNS（集成阿里DDNS客户端）
+LuCI ---> Applications ---> luci-app-diskman   #磁盘管理工具
+    luci-app-diskman ---> Include btrfs-progs   #新型的写时复制 (COW)
+    luci-app-diskman ---> Include lsblk   #lsblk命令 用于列出所有可用块设备的信息
+    luci-app-diskman ---> Include mdadm   #mdadm命令 用于创建、管理、监控RAID设备的工具
+    luci-app-diskman ---> Include kmod-md-raid456   #RAID 4,5,6 驱动程序模块（丢弃）
+    luci-app-diskman ---> Include kmod-md-linear   #RAID 驱动程序模块（丢弃）
+LuCI ---> Applications ---> luci-app-docker  #Docker容器
+LuCI ---> Applications ---> luci-app-dockerman  #Dockerman容器  *
+LuCI ---> Applications ---> luci-app-filetransfer  #文件传输（可web安装ipk包）
+      LuCI ---> Applications ---> luci-app-netdata  #Netdata实时监控（图形化）
+LuCI ---> Applications ---> luci-app-nlbwmon   #网络带宽监视器
+LuCI ---> Applications ---> luci-app-openclash  #运行在OpenWrt上的Clash代理客户端（Le库以外的插件）
+LuCI ---> Applications ---> luci-app-samba   #网络共享（Samba）
+LuCI ---> Applications ---> luci-app-samba4   #网络共享（Samba4）
+LuCI ---> Applications ---> luci-app-serverchan   #微信/请不要发布这类群，谢谢推送的插件
+LuCI ---> Applications ---> luci-app-socat  #Socat多功能的网络工具(端口转发)   *
+LuCI ---> Applications ---> luci-app-sqm  #流量智能队列管理（QOS）
+LuCI ---> Applications ---> luci-app-ttyd   #网页终端命令行
+LuCI ---> Applications ---> luci-app-turboacc   #Turbo ACC 网络加速(支持 Fast Path 或者 硬件 NAT)
+    luci-app-turboacc ---> Include Flow Offload   #Flow Offload加速(提高路由转发效率)  *
+    luci-app-turboacc ---> Include Shortcut-FE  #Shortcut-FE 流量分载
+    luci-app-turboacc ---> Include Shortcut-FE CM   #Shortcut-FE 流量分载(高通芯片版)  *
+    luci-app-turboacc ---> Include BBR CCA  #BBR拥塞控制算法提升TCP网络性能
+    luci-app-turboacc ---> Include Pdnsd   #DNS防污染 Pdnsd  *
+    luci-app-turboacc ---> Include DNSForwarder  #DNS防污染 Forwarder
+    luci-app-turboacc ---> Include DNSProxy  #DNS防污染 Proxy
+LuCI ---> Applications ---> luci-app-uhttpd  #uHTTPd Web服务器
+LuCI ---> Applications ---> luci-app-upnp   #通用即插即用UPnP（端口自动转发）
+LuCI ---> Applications ---> luci-app-verysync  #微力同步
+LuCI ---> Applications ---> luci-app-vsftpd  #FTP服务器
+LuCI ---> Applications ---> luci-app-watchcat  #断网检测功能与定时重启
+LuCI ---> Applications ---> luci-app-wol   #WOL网络唤醒
+LuCI ---> Applications ---> luci-app-wrtbwmon  #实时流量监测
+LuCI ---> Applications ---> luci-app-mjpg-streamer   #兼容Linux-UVC的摄像头程序
 
 ## 固件预览
 ![image](https://github.com/sdf8057/cloudbuild/blob/main/pic/overview.png)
