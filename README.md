@@ -40,28 +40,46 @@ luci-app-ipsec-vpnd
 luci-app-openvpn-server  
 luci-app-zerotier  
 
-luci-app-arpbind  #IP/MAC绑定#
-luci-app-autoreboot  #支持计划重启#
+luci-app-arpbind  #IP/MAC绑定
+
+luci-app-autoreboot  #支持计划重启
+
 luci-app-ddns   #动态域名 DNS（集成阿里DDNS客户端）
+
 luci-app-diskman   #磁盘管理工具
+
 luci-app-diskman ---> Include btrfs-progs   #新型的写时复制 (COW)
     luci-app-diskman ---> Include lsblk   #lsblk命令 用于列出所有可用块设备的信息
     luci-app-diskman ---> Include mdadm   #mdadm命令 用于创建、管理、监控RAID设备的工具
     luci-app-diskman ---> Include kmod-md-raid456   #RAID 4,5,6 驱动程序模块（丢弃）
     luci-app-diskman ---> Include kmod-md-linear   #RAID 驱动程序模块（丢弃）
+    
 luci-app-docker  #Docker容器
+
 luci-app-dockerman  #Dockerman容器  *
+
 luci-app-filetransfer  #文件传输（可web安装ipk包）
+
 luci-app-netdata  #Netdata实时监控（图形化）
+
 luci-app-nlbwmon   #网络带宽监视器
+
 luci-app-openclash  #运行在OpenWrt上的Clash代理客户端（Le库以外的插件）
+
 luci-app-samba   #网络共享（Samba）
+
 luci-app-samba4   #网络共享（Samba4）
+
 luci-app-serverchan   #微信/请不要发布这类群，谢谢推送的插件
+
 luci-app-socat  #Socat多功能的网络工具(端口转发)   *
+
 luci-app-sqm  #流量智能队列管理（QOS）
+
 luci-app-ttyd   #网页终端命令行
+
 luci-app-turboacc   #Turbo ACC 网络加速(支持 Fast Path 或者 硬件 NAT)
+
     luci-app-turboacc ---> Include Flow Offload   #Flow Offload加速(提高路由转发效率)  *
     luci-app-turboacc ---> Include Shortcut-FE  #Shortcut-FE 流量分载
     luci-app-turboacc ---> Include Shortcut-FE CM   #Shortcut-FE 流量分载(高通芯片版)  *
@@ -70,12 +88,19 @@ luci-app-turboacc   #Turbo ACC 网络加速(支持 Fast Path 或者 硬件 NAT)
     luci-app-turboacc ---> Include DNSForwarder  #DNS防污染 Forwarder
     luci-app-turboacc ---> Include DNSProxy  #DNS防污染 Proxy
 luci-app-uhttpd  #uHTTPd Web服务器
+
 luci-app-upnp   #通用即插即用UPnP（端口自动转发）
+
 luci-app-verysync  #微力同步
+
 luci-app-vsftpd  #FTP服务器
+
 luci-app-watchcat  #断网检测功能与定时重启
+
 luci-app-wol   #WOL网络唤醒
+
 luci-app-wrtbwmon  #实时流量监测
+
 luci-app-mjpg-streamer   #兼容Linux-UVC的摄像头程序
 
 ## 固件预览
