@@ -64,6 +64,7 @@ luci-app-socat  #Socat多功能的网络工具(端口转发)   *
 luci-app-sqm  #流量智能队列管理（QOS）  
 luci-app-ttyd   #网页终端命令行  
 luci-app-turboacc   #Turbo ACC 网络加速(支持 Fast Path 或者 硬件 NAT)  
+
     luci-app-turboacc ---> Include Flow Offload   #Flow Offload加速(提高路由转发效率)  *
     luci-app-turboacc ---> Include Shortcut-FE  #Shortcut-FE 流量分载
     luci-app-turboacc ---> Include Shortcut-FE CM   #Shortcut-FE 流量分载(高通芯片版)  *
